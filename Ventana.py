@@ -4,6 +4,9 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
     def __init__(self, *args, **kwargs):
         QtWidgets.QMainWindow.__init__(self, *args, **kwargs)
         self.setupUi(self)
+        self.chiste.clicked.connect(self.actualizar)
+    def actualizar(self):
+        self.label.setText("Aqui saldria el chiste")
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication([])

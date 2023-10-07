@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'untitled.ui'
+# Form implementation generated from reading ui file 'ventana.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.6
 #
@@ -23,26 +23,26 @@ class Ui_MainWindow(object):
         MainWindow.setAnimated(True)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
-        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton.setGeometry(QtCore.QRect(60, 270, 181, 61))
-        self.pushButton.setCursor(QtGui.QCursor(QtCore.Qt.OpenHandCursor))
-        self.pushButton.setToolTipDuration(9)
-        self.pushButton.setObjectName("pushButton")
-        self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_2.setGeometry(QtCore.QRect(530, 270, 181, 61))
-        self.pushButton_2.setCursor(QtGui.QCursor(QtCore.Qt.OpenHandCursor))
-        self.pushButton_2.setToolTipDuration(9)
-        self.pushButton_2.setObjectName("pushButton_2")
-        self.pushButton_3 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_3.setGeometry(QtCore.QRect(270, 270, 101, 61))
-        self.pushButton_3.setCursor(QtGui.QCursor(QtCore.Qt.OpenHandCursor))
-        self.pushButton_3.setToolTipDuration(9)
-        self.pushButton_3.setObjectName("pushButton_3")
-        self.pushButton_4 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_4.setGeometry(QtCore.QRect(400, 270, 101, 61))
-        self.pushButton_4.setCursor(QtGui.QCursor(QtCore.Qt.OpenHandCursor))
-        self.pushButton_4.setToolTipDuration(9)
-        self.pushButton_4.setObjectName("pushButton_4")
+        self.chiste = QtWidgets.QPushButton(self.centralwidget)
+        self.chiste.setGeometry(QtCore.QRect(60, 270, 181, 61))
+        self.chiste.setCursor(QtGui.QCursor(QtCore.Qt.OpenHandCursor))
+        self.chiste.setToolTipDuration(9)
+        self.chiste.setObjectName("chiste")
+        self.traducir = QtWidgets.QPushButton(self.centralwidget)
+        self.traducir.setGeometry(QtCore.QRect(530, 270, 181, 61))
+        self.traducir.setCursor(QtGui.QCursor(QtCore.Qt.OpenHandCursor))
+        self.traducir.setToolTipDuration(9)
+        self.traducir.setObjectName("traducir")
+        self.es = QtWidgets.QPushButton(self.centralwidget)
+        self.es.setGeometry(QtCore.QRect(270, 270, 101, 61))
+        self.es.setCursor(QtGui.QCursor(QtCore.Qt.OpenHandCursor))
+        self.es.setToolTipDuration(9)
+        self.es.setObjectName("es")
+        self.en = QtWidgets.QPushButton(self.centralwidget)
+        self.en.setGeometry(QtCore.QRect(400, 270, 101, 61))
+        self.en.setCursor(QtGui.QCursor(QtCore.Qt.OpenHandCursor))
+        self.en.setToolTipDuration(9)
+        self.en.setObjectName("en")
         self.label = QtWidgets.QLabel(self.centralwidget)
         self.label.setGeometry(QtCore.QRect(300, 80, 171, 61))
         self.label.setText("")
@@ -58,10 +58,10 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "JokeApp"))
-        self.pushButton.setText(_translate("MainWindow", "Contar chiste"))
-        self.pushButton_2.setText(_translate("MainWindow", "Traducir"))
-        self.pushButton_3.setText(_translate("MainWindow", "ES"))
-        self.pushButton_4.setText(_translate("MainWindow", "EN"))
+        self.chiste.setText(_translate("MainWindow", "Contar chiste"))
+        self.traducir.setText(_translate("MainWindow", "Traducir"))
+        self.es.setText(_translate("MainWindow", "ES"))
+        self.en.setText(_translate("MainWindow", "EN"))
 
 
 if __name__ == "__main__":
