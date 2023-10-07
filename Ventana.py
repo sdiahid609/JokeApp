@@ -5,10 +5,19 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
     def __init__(self, *args, **kwargs):
         QtWidgets.QMainWindow.__init__(self, *args, **kwargs)
         self.setupUi(self)
-        self.chiste.clicked.connect(self.actualizar)
-    def actualizar(self):
+        self.es.setEnabled(False)
+        self.chiste.clicked.connect(self.btnChiste)
+        self.es.clicked.connect(self.btnES)
+        self.en.clicked.connect(self.btnEN)
+    def btnChiste(self):
         text = printJoke()
         self.textBrowser.setText(text)
+    def btnES(self):
+        self.es.setEnabled(False)
+        self.en.setEnabled(True)
+    def btnEN(self):
+        self.en.setEnabled(False)
+        self.es.setEnabled(True)
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication([])
