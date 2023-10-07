@@ -10,7 +10,11 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.es.clicked.connect(self.btnES)
         self.en.clicked.connect(self.btnEN)
     def btnChiste(self):
-        text = printJoke()
+        if self.es.isEnabled():
+            esp=False
+        else:
+            esp=True
+        text = printJoke(esp)
         self.textBrowser.setText(text)
     def btnES(self):
         self.es.setEnabled(False)
