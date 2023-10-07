@@ -22,3 +22,10 @@ def printJoke(esp):
     joke = joke.json()
 
     return textOutput(joke)
+
+def translate(text):
+    #Ponemos el proveedor mymemory y indicamos los idiomas
+    translator = Translator(provider='mymemory', from_lang='en', to_lang='es')
+    #Guardamos la traducción en translation
+    return translator.translate(text)
+    

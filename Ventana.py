@@ -9,6 +9,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.chiste.clicked.connect(self.btnChiste)
         self.es.clicked.connect(self.btnES)
         self.en.clicked.connect(self.btnEN)
+        self.traducir.clicked.connect(self.btnTraducir)
     def btnChiste(self):
         if self.es.isEnabled():
             esp=False
@@ -22,6 +23,8 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
     def btnEN(self):
         self.en.setEnabled(False)
         self.es.setEnabled(True)
+    def btnTraducir(self):
+        self.textBrowser.setText(translate(self.textBrowser.toPlainText()))
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication([])
