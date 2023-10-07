@@ -1,4 +1,5 @@
 from ventana_ui import *
+from Datos import *
 
 class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
     def __init__(self, *args, **kwargs):
@@ -6,7 +7,8 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.setupUi(self)
         self.chiste.clicked.connect(self.actualizar)
     def actualizar(self):
-        self.label.setText("Aqui saldria el chiste")
+        text = printJoke()
+        self.textBrowser.setText(text)
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication([])
