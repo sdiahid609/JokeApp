@@ -1,4 +1,13 @@
 import requests
+from translate import Translator
+
+#Los chistes pueden tener preguntas y respuestas o solo una 
+#frase, por lo que hay que tener en cuenta los diferentes campos
+def textOutput():
+    if 'joke' in joke:
+        return str(joke['joke'])
+    else:
+        return str(joke['setup']) + ' ' + str(joke['delivery'])
 
 lang = input('Introduce el idioma:')
 
@@ -14,10 +23,9 @@ joke = requests.get(url)
 #Convertimos la variable joke en un diccionario usando json()
 joke = joke.json()
 
-#Los chistes pueden tener preguntas y respuestas o solo una 
-#frase, por lo que hay que tener en cuenta los diferentes campos
-if 'joke' in joke:
-    print (str(joke['joke']))
-else:
-    print (str(joke['setup']))
-    print (str(joke['delivery']))
+#Ponemos el proveedor mymemory y indicamos los idiomas
+translator = Translator(provider='mymemory', from_lang='en', to_lang='es')
+#Guardamos la traducción en translation
+translation = translator.translate(textOutput())
+
+print (translation)
