@@ -9,12 +9,46 @@ def textOutput(joke):
     else:
         return str(joke['setup']) + ' ' + str(joke['delivery'])
 
-def printJoke(esp):
-    if esp:
-        url = 'https://v2.jokeapi.dev/joke/Any?lang=es'
+def printJoke(esp, category, flag, search):
+    #URL https://v2.jokeapi.dev/joke/Programming?lang=es&blacklistFlags=religious
+    #Categoría
+    url='https://v2.jokeapi.dev/joke/'
+    if category=="Programming":
+        url+='Programming?'
+    elif category=="Misc":
+        url+='Misc?'
+    elif category=="Dark":
+        url+='Dark?'
+    elif category=="Pun":
+        url+='Pun?'
+    elif category=="Spooky":
+        url+='Spooky?'
+    elif category=="Christmas":
+        url+='Christmas?'
     else:
-        url = 'https://v2.jokeapi.dev/joke/Any?lang=en'
+        url+='Any?'
+    #Idioma
+    if esp:
+        url += 'lang=es'
+    #Si no pones lang, el idioma por defecto es EN
 
+    #Flags
+    if flag=="nsfw":
+        url+='&blacklistFlags=nsfw'
+    elif flag=="religious":
+        url+='&blacklistFlags=religious'
+    elif flag=="political":
+        url+='&blacklistFlags=political'
+    elif flag=="racist":
+        url+='&blacklistFlags=racist'
+    elif flag=="sexist":
+        url+='&blacklistFlags=sexist'
+    elif flag=="explicit":
+        url+='&blacklistFlags=explicit'
+
+    #search
+    if search!="":
+        url+='&contains='+search
     #Guardamos la respuesta de la url en la variable joke
     joke = requests.get(url)
 
