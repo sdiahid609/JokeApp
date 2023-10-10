@@ -25,6 +25,10 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.es.setEnabled(True)
     def btnTraducir(self):
         self.textBrowser.setText(translate(self.textBrowser.toPlainText()))
+    def despCategory(self):
+        
+    def despFlag(self):
+    def search(self):
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication([])
