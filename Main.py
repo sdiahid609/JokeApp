@@ -24,6 +24,11 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.textBrowser.setText(text)
     def btnES(self, esp):
         self.esp = not self.esp 
+        self.esBtn.setStyleSheet("border-radius: 10px;\n"
+        "background-color: rgb(255, 255, 255);\n"
+        "image: url(:/Bandera/Bandera-de-Reino-Unido.png);\n"
+        "\n"
+        "")
     def btnTraducir(self):
         #Se traduce el texto del textBrowser
         self.textBrowser.setText(translate(self.textBrowser.toPlainText()))
