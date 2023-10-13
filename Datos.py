@@ -31,21 +31,7 @@ def printJoke(esp, category, flag, search):
     if esp:
         url += 'lang=es'
     #Si no pones lang, el idioma por defecto es EN
-
-    #Flags
-    if flag=="nsfw":
-        url+='&blacklistFlags=nsfw'
-    elif flag=="religious":
-        url+='&blacklistFlags=religious'
-    elif flag=="political":
-        url+='&blacklistFlags=political'
-    elif flag=="racist":
-        url+='&blacklistFlags=racist'
-    elif flag=="sexist":
-        url+='&blacklistFlags=sexist'
-    elif flag=="explicit":
-        url+='&blacklistFlags=explicit'
-
+    
     #search
     if search!="":
         url+='&contains='+search
