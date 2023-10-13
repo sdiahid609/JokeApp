@@ -89,12 +89,12 @@ background-color: rgb(255, 255, 255);
      <string>Traducir</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="es">
+   <widget class="QPushButton" name="esBtn">
     <property name="geometry">
      <rect>
-      <x>310</x>
-      <y>240</y>
-      <width>41</width>
+      <x>290</x>
+      <y>160</y>
+      <width>31</width>
       <height>31</height>
      </rect>
     </property>
@@ -106,7 +106,10 @@ background-color: rgb(255, 255, 255);
     </property>
     <property name="styleSheet">
      <string notr="true">border-radius: 10px;
-background-color: rgb(255, 255, 255);</string>
+background-color: rgb(255, 255, 255);
+image: url(:/Bandera/Bandera-de-Reino-Unido.png);
+
+</string>
     </property>
     <property name="text">
      <string/>
@@ -144,23 +147,6 @@ border-radius: 10px;</string>
     </property>
     <property name="placeholderText">
      <string>Buscar por palabra</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_4">
-    <property name="geometry">
-     <rect>
-      <x>320</x>
-      <y>240</y>
-      <width>21</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);
-border-radius: 10px;</string>
-    </property>
-    <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/Bandera/Bandera_de_España.svg(3).png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
    <widget class="QPushButton" name="searchBtn">
@@ -262,6 +248,16 @@ border-radius: 10px;</string>
      </item>
     </layout>
    </widget>
+   <zorder>chiste</zorder>
+   <zorder>traducir</zorder>
+   <zorder>textBrowser</zorder>
+   <zorder>layoutWidget</zorder>
+   <zorder>lineEdit</zorder>
+   <zorder>searchBtn</zorder>
+   <zorder>comboBox</zorder>
+   <zorder>pushButton</zorder>
+   <zorder>pushButton_2</zorder>
+   <zorder>esBtn</zorder>
   </widget>
  </widget>
  <resources>

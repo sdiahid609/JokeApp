@@ -40,14 +40,17 @@ class Ui_MainWindow(object):
 "background-color: rgb(255, 255, 255);\n"
 "")
         self.traducir.setObjectName("traducir")
-        self.es = QtWidgets.QPushButton(self.centralwidget)
-        self.es.setGeometry(QtCore.QRect(310, 240, 41, 31))
-        self.es.setCursor(QtGui.QCursor(QtCore.Qt.OpenHandCursor))
-        self.es.setToolTipDuration(9)
-        self.es.setStyleSheet("border-radius: 10px;\n"
-"background-color: rgb(255, 255, 255);")
-        self.es.setText("")
-        self.es.setObjectName("es")
+        self.esBtn = QtWidgets.QPushButton(self.centralwidget)
+        self.esBtn.setGeometry(QtCore.QRect(290, 160, 31, 31))
+        self.esBtn.setCursor(QtGui.QCursor(QtCore.Qt.OpenHandCursor))
+        self.esBtn.setToolTipDuration(9)
+        self.esBtn.setStyleSheet("border-radius: 10px;\n"
+"background-color: rgb(255, 255, 255);\n"
+"image: url(:/Bandera/Bandera-de-Reino-Unido.png);\n"
+"\n"
+"")
+        self.esBtn.setText("")
+        self.esBtn.setObjectName("esBtn")
         self.textBrowser = QtWidgets.QTextBrowser(self.centralwidget)
         self.textBrowser.setGeometry(QtCore.QRect(30, 60, 301, 131))
         self.textBrowser.setStyleSheet("background-color: rgb(255, 255, 255);\n"
@@ -59,11 +62,6 @@ class Ui_MainWindow(object):
 "border-radius: 10px;")
         self.lineEdit.setText("")
         self.lineEdit.setObjectName("lineEdit")
-        self.label_4 = QtWidgets.QLabel(self.centralwidget)
-        self.label_4.setGeometry(QtCore.QRect(320, 240, 21, 31))
-        self.label_4.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-"border-radius: 10px;")
-        self.label_4.setObjectName("label_4")
         self.searchBtn = QtWidgets.QPushButton(self.centralwidget)
         self.searchBtn.setGeometry(QtCore.QRect(240, 20, 21, 25))
         self.searchBtn.setStyleSheet("image: url(:/Busqueda/lupa.png);\n"
@@ -101,6 +99,15 @@ class Ui_MainWindow(object):
         self.pushButton.setText("")
         self.pushButton.setObjectName("pushButton")
         self.horizontalLayout.addWidget(self.pushButton)
+        self.chiste.raise_()
+        self.traducir.raise_()
+        self.textBrowser.raise_()
+        self.lineEdit.raise_()
+        self.searchBtn.raise_()
+        self.comboBox.raise_()
+        self.pushButton.raise_()
+        self.pushButton_2.raise_()
+        self.esBtn.raise_()
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -112,7 +119,6 @@ class Ui_MainWindow(object):
         self.chiste.setText(_translate("MainWindow", "Contar chiste"))
         self.traducir.setText(_translate("MainWindow", "Traducir"))
         self.lineEdit.setPlaceholderText(_translate("MainWindow", "Buscar por palabra"))
-        self.label_4.setText(_translate("MainWindow", "<html><head/><body><p><img src=\":/Bandera/Bandera_de_España.svg(3).png\"/></p></body></html>"))
         self.comboBox.setItemText(0, _translate("MainWindow", "Misc"))
         self.comboBox.setItemText(1, _translate("MainWindow", "Programación"))
         self.comboBox.setItemText(2, _translate("MainWindow", "Navidad"))
