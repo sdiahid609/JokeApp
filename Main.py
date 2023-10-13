@@ -1,4 +1,4 @@
-from ventana_ui import *
+from ventana import *
 from Datos import *
 
 #Hereda las clases de la ventana_ui
@@ -40,9 +40,6 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
     def despCategory(self):
         categoria=""
         return categoria
-    def despFlag(self):
-        flag=""
-        return flag
     def search(self):
         search=""
         return search
