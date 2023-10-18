@@ -1,6 +1,5 @@
 from ventana import *
 from Datos import *
-
 #Hereda las clases de la ventana_ui
 class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
     #Método de inicialización
@@ -22,13 +21,21 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         text = printJoke(self, selected_category, content)
         #Ponemos en el textBrowser el texto
         self.textBrowser.setText(text)
-    def btnES(self, esp):
-        self.esp = not self.esp 
-        self.esBtn.setStyleSheet("border-radius: 10px;\n"
-        "background-color: rgb(255, 255, 255);\n"
-        "image: url(:/Bandera/Bandera-de-Reino-Unido.png);\n"
-        "\n"
-        "")
+        self.lineEdit.setText("")
+    def btnES(self):
+        if(self.esp):
+            self.esBtn.setStyleSheet("border-radius: 10px;\n"
+    "background-color: rgb(255, 255, 255);\n"
+    "image: url(:/Bandera/Bandera-de-Reino-Unido.png);\n"
+    "\n"
+    "")
+        else:
+            self.esBtn.setStyleSheet("border-radius: 10px;\n"
+    "background-color: rgb(255, 255, 255);\n"
+    "image: url(:/Bandera/espana.png);\n"
+    "\n"
+    "")
+        self.esp = not self.esp
     def btnTraducir(self):
         #Se traduce el texto del textBrowser
         self.textBrowser.setText(translate(self.textBrowser.toPlainText()))

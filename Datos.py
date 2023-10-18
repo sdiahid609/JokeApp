@@ -32,7 +32,7 @@ def printJoke(self, category, search):
     #Si no pones lang, el idioma por defecto es EN
 
     #search
-    if search!="":
+    if search:
         url+='&contains='+search
     #Guardamos la respuesta de la url en la variable joke
     joke = requests.get(url)
@@ -40,10 +40,10 @@ def printJoke(self, category, search):
     if joke.status_code == 200:
         #Convertimos la variable joke en un diccionario usando json()
         joke = joke.json()
-
-        return textOutput(joke)
-    else:
-        return textOutput("No hemos podido encontrar ningún chiste con las características requeridas o no ha habido respuesta, lo sentimos.")
+        if not joke['error']:
+            return textOutput(joke)
+        else:
+            return "No hemos podido encontrar ningún chiste con las características requeridas o no ha habido respuesta, lo sentimos."
 
 def translate(text):
     #Ponemos el proveedor mymemory y indicamos los idiomas
