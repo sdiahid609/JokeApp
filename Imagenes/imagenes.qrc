@@ -1,0 +1,11 @@
+<RCC>
+  <qresource prefix="Bandera">
+    <file>espana.png</file>
+    <file>Bandera-de-Reino-Unido.png</file>
+  </qresource>
+  <qresource prefix="Busqueda">
+    <file>informationwebcircularbuttonsymbol_79860.png</file>
+    <file>historique-icone-de-l-historique-noir.png</file>
+    <file>lupa.png</file>
+  </qresource>
+</RCC>
