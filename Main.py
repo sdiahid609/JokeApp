@@ -1,8 +1,10 @@
+import platform
 import os
 from ventana import *
 from Datos import *
 
-os.environ['QT_QPA_PLATFORM'] = 'xcb'
+if platform.system() == 'Linux':
+    os.environ['QT_QPA_PLATFORM'] = 'xcb'
 #Hereda las clases de la ventana_ui
 class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
     #Método de inicialización
