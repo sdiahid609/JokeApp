@@ -20,6 +20,16 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.esBtn.clicked.connect(self.btnES)
         self.chiste.clicked.connect(self.btnChiste)
         self.traducir.clicked.connect(self.btnTraducir)
+
+        try:
+            # Intenta cargar la fuente "Noto Serif CJK KR"
+            font = QtGui.QFont("Noto Serif CJK KR")
+            self.setFont(font)
+        except Exception as e:
+            # En caso de error, utiliza una fuente por defecto
+            font = QtGui.QFont("Arial")  # Puedes cambiar "Arial" por la fuente que desees
+            self.setFont(font)
+            
     def btnChiste(self):
         content = self.lineEdit.text()
         selected_category = self.comboBox.currentText()
