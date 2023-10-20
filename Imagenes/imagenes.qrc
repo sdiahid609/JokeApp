@@ -8,4 +8,7 @@
     <file>historique-icone-de-l-historique-noir.png</file>
     <file>lupa.png</file>
   </qresource>
+  <qresource prefix="Icono">
+    <file>3898175.png</file>
+  </qresource>
 </RCC>

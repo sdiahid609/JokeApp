@@ -31,6 +31,10 @@
   <property name="windowTitle">
    <string>JokeApp</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="Imagenes/imagenes.qrc">
+    <normaloff>:/Icono/3898175.png</normaloff>:/Icono/3898175.png</iconset>
+  </property>
   <property name="layoutDirection">
    <enum>Qt::LeftToRight</enum>
   </property>
