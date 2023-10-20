@@ -3,6 +3,7 @@ import os
 from ventana import *
 from Datos import *
 
+#Ejecutar X11 en sistemas linux en lugar de Wayland
 if platform.system() == 'Linux':
     os.environ['QT_QPA_PLATFORM'] = 'xcb'
 #Hereda las clases de la ventana_ui
