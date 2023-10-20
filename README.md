@@ -1,8 +1,6 @@
-# JokeApp
-
 JokeApp es una aplicación que genera chistes en distintos idiomas y diferentes categorías permitiendo tambien la traducción de estos. Esta aplicación es una GUI desarrollada en Python utilizando PyQt5.
 
-## Requisitos
+-Requisitos
 
 Instalar Python 3.11.6 
 
@@ -26,7 +24,7 @@ urllib3~=2.0.6
 wheel~=0.41.2
 ==========================
 
-## Instalación
+-Instalación
 
 1. Clona o descarga el repositorio en tu máquina local.
 
@@ -35,11 +33,19 @@ wheel~=0.41.2
 3. Ejecuta la aplicación.
 
 
-## Función de botones
+-Función de botones
 
+1. Barra de busqueda para buscar chiste por palabra
 
+2. Boton lupa y boton chiste para buscar un chiste con las características introducidas
 
-## Contacto
+3. Boton traducir pasa el texto de inglés a español
+
+4. Desplegable para especificar la categoría
+
+5. Bandera cambia el lenguaje del chiste de inglés a español
+
+-Contacto
 
 Si tienes alguna pregunta o inquietud, puedes ponerte en contacto con el autor del proyecto:
 

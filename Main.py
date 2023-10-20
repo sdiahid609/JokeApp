@@ -21,6 +21,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.esBtn.clicked.connect(self.btnES)
         self.chiste.clicked.connect(self.btnChiste)
         self.traducir.clicked.connect(self.btnTraducir)
+        self.searchBtn.clicked.connect(self.btnChiste)
 
         try:
             # Intenta cargar la fuente "Noto Serif CJK KR"
